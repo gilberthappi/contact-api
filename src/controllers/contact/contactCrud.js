@@ -16,7 +16,7 @@ export const createContact = async (req, res) => {
     const mailOptions = {
       from: 'gdushimimana6@gmail.com',
       to: newContact.email,
-      subject: 'Thank You for Contacting Me',
+      subject: 'Response',
       html: `
         <html>
           <head>
@@ -53,10 +53,10 @@ export const createContact = async (req, res) => {
           <body>
             <div class="container">
               <h1>Thank You for Contacting Me</h1>
-              <p>Dear ${newContact.name},</p>
+              <p>Dear Sir,</p>
               <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
               <div class="signature">
-                <p>Best regards,<br>Eng Happi Gilbert</p>
+                <p>Best regards,<br>Eng Happi DUSHIMIMANA Gilbert</p>
               </div>
             </div>
           </body>
