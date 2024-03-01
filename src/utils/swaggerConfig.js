@@ -12,7 +12,7 @@ export const swaggerOptions = {
           url: 'http://localhost:100/api/v1',
         },
         {
-          url: '#/api/v1',
+          url: 'https://contact-api-dmk4.onrender.com/api/v1',
         },
       ],
       
