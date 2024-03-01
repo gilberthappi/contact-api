@@ -53,7 +53,7 @@ export const createContact = async (req, res) => {
           <body>
             <div class="container">
               <h1>Thank You for Contacting Me</h1>
-              <p>Dear Sir,</p>
+              <p>Dear Sir / Madam,</p>
               <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
               <div class="signature">
                 <p>Best regards,<br>Eng Happi DUSHIMIMANA Gilbert</p>
