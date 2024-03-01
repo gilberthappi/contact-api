@@ -4,14 +4,22 @@ import { transporter } from '../../utils/mailTransport.js';
 
 export const createContact = async (req, res) => {
   try {
-    const newContact = await CONTACT.create(req.body);
+    const { fullName, email, phoneNumber, subject, message } = req.body;
+
+    const newContact = await CONTACT.create({
+      fullName,
+      email,
+      phoneNumber,
+      subject,
+      message
+    });
 
     if (!newContact) {
       return res.status(400).json({ message: 'Bad Request - Invalid data' });
     }
 
     console.log('Recipient Email:', newContact.email);
-
+    const greetingName = fullName || 'Sir/Madam';
     // Send a welcome email to the user
     const mailOptions = {
       from: 'gdushimimana6@gmail.com',
@@ -53,7 +61,7 @@ export const createContact = async (req, res) => {
           <body>
             <div class="container">
               <h1>Thank You for Contacting Me</h1>
-              <p>Dear Sir / Madam,</p>
+              <p>Dear ${greetingName},</p>
               <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
               <div class="signature">
                 <p>Best regards,<br>Eng Happi DUSHIMIMANA Gilbert</p>
